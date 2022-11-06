@@ -24,3 +24,11 @@ create_actor(name='Jack', age=20) -> {
 Вам необходимо написать только определение функции create_actor'''
 
 
+def create_actor(**kwargs):
+    d = {'name': 'Райан',
+        'surname': 'Рейнольдс',
+        'age': 46,}
+    if kwargs != {}:
+        for i, j in kwargs.items():
+            d[i] = j
+    return d
